@@ -1,33 +1,30 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Button from "./button"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faApple } from "@fortawesome/free-brands-svg-icons"
+
+import "../assets/styles/header.scss"
+
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header>
+    <div className={"header--nav"}>
+      <div className={"header--logo"}>
+        <FontAwesomeIcon icon={faApple} />
+      </div>
+      <ul className={"header--nav-items"}>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>
+          <Button type={"btn--btn-nav"} text={"Notify me"} />
+        </li>
+      </ul>
     </div>
+    {/* {siteTitle} */}
   </header>
 )
 

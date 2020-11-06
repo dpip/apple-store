@@ -1,0 +1,40 @@
+@import "vars";
+
+header {
+  background-color: $white;
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  .header--nav {
+    width: 100%;
+    @include flex-type(space-between, center, row);
+    .header--logo {
+      background-color: $black;
+      color: $white;
+      height: 4rem;
+      width: 4rem;
+      padding: 1rem;
+      @include flex-type(center, center, row);
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+  .header--nav-items {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px 0rem;
+    font-size: 14px;
+    li {
+      @include flex-type(center, center, row);
+      padding: 0rem 1rem;
+      margin: 0px;
+      cursor: pointer;
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+}

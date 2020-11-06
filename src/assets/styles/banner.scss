@@ -1,0 +1,50 @@
+@import "vars";
+
+.body {
+  background-color: #fff;
+}
+
+.banner {
+  min-height: 415px;
+  width: calc(100% - 4rem);
+  margin: 0px 4rem;
+  background-color: $black;
+  color: $white;
+  padding: 3rem;
+  position: relative;
+  background-position: 80% 125px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  .specs {
+    @include flex-type(flex-start, center, row);
+    .specs--item:first-child {
+      margin-right: 2rem;
+    }
+  }
+  .banner--nav {
+    margin: 0px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    ul {
+      list-style-type: none;
+      padding: 1rem 3rem;
+      li {
+        @include flex-type(center, center, row);
+        // margin: 1rem 0rem 0rem 0rem;
+        a {
+          text-decoration: none;
+          color: $gray;
+          transition: $transition;
+          &:hover {
+            color: $gray-l;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $desktopS) {
+    width: calc(100% - 0px);
+    margin: 0px 0px;
+  }
+}

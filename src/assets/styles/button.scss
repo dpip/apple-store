@@ -1,0 +1,26 @@
+@import "vars";
+
+.btn {
+  cursor: pointer;
+  &--btn-nav {
+    color: $white;
+    background-color: $blue;
+    border-radius: $nav-radius;
+    border: 1px solid $blue;
+    padding: 0.5rem 1rem;
+    font-size: $fz-sm;
+    &:focus {
+      outline: 1px solid $blue;
+    }
+  }
+  &--btn-subscribe {
+    color: $white;
+    background-color: $black;
+    border: 1px solid $black;
+    padding: 0.5rem 2rem;
+    font-size: 14px;
+    &:focus {
+      outline: 1px solid $gray;
+    }
+  }
+}
